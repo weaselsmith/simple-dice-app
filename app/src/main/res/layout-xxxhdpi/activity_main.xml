@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/increase_dice"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="222dp"
+            android:background="@color/upper"
+            app:layout_constraintEnd_toEndOf="@+id/die_selector"
+            app:layout_constraintStart_toEndOf="@+id/die_selector">
+
+            <Spinner
+                android:id="@+id/die_selector"
+                android:layout_width="128dp"
+                android:layout_height="0dp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/dieCountDisplay"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/modDisplay" />
+
+            <TextView
+                android:id="@+id/dieCountDisplay"
+                android:layout_width="60dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="184dp"
+                android:layout_marginBottom="14dp"
+                android:background="@color/white"
+                android:text="@string/default_count"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                app:layout_constraintBottom_toTopOf="@+id/less_dice"
+                app:layout_constraintEnd_toStartOf="@+id/modDisplay"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/more_dice" />
+
+            <TextView
+                android:id="@+id/modDisplay"
+                android:layout_width="60dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="14dp"
+                android:background="@color/white"
+                android:text="@string/default_mod"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                app:layout_constraintBottom_toTopOf="@+id/decrease_mod"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/dieCountDisplay"
+                app:layout_constraintTop_toBottomOf="@+id/increase_mod" />
+
+            <Button
+                android:id="@+id/more_dice"
+                android:layout_width="55dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="43dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="200dp"
+                android:layout_marginBottom="18dp"
+                android:background="@drawable/plus_minus_button"
+                android:text="@string/plus"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/dieCountDisplay"
+                app:layout_constraintEnd_toStartOf="@+id/increase_mod"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/less_dice"
+                android:layout_width="55dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="43dp"
+                android:layout_marginEnd="200dp"
+                android:layout_marginBottom="18dp"
+                android:background="@drawable/plus_minus_button"
+                android:text="@string/minus"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/decrease_mod"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dieCountDisplay" />
+
+            <Button
+                android:id="@+id/increase_mod"
+                android:layout_width="55dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="38dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/plus_minus_button"
+                android:text="@string/plus"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/modDisplay"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/more_dice"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/decrease_mod"
+                android:layout_width="55dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="38dp"
+                android:layout_marginBottom="18dp"
+                android:background="@drawable/plus_minus_button"
+                android:text="@string/minus"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/less_dice"
+                app:layout_constraintTop_toBottomOf="@+id/modDisplay" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:id="@+id/scroll_log"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/log">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/roll_log"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_log"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </LinearLayout>
+        </ScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:background="@color/lower">
+
+            <Button
+                android:id="@+id/roll_button"
+                android:layout_width="297dp"
+                android:layout_height="85dp"
+                android:backgroundTint="@color/button"
+                android:text="@string/button_text"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.545" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

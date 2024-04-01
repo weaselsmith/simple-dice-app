@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="upper">#4C2A85</color>
+    <color name="log">#E9EDF3</color>
+    <color name="log1">#F1F4B6</color>
+    <color name="lower">#4C2A85</color>
+    <color name="lower1">#320E3B</color>
+    <color name="button">#6B7FD7</color>
+    <color name="button1">#2FA7CC</color>
+    <color name="button2">#135088</color>
+    <color name="widgets">#E9EDF3</color>
+    <color name="old_log">#E5DDCB</color>
+    <color name="old_lower">#223716</color>
+    <color name="old_upper">#49C144</color>
+    #FBC200
+</resources>

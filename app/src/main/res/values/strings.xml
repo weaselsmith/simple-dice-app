@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Simple Dice App</string>
+    <string name="button_text">Roll!</string>
+    <string name="default_log">Your rolls go here</string>
+    <string name="default_count"> 1 </string>
+    <string name="default_mod"> + 0 </string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string-array name="die_selection">
+        <item>d4</item>
+        <item>d6</item>
+        <item>d8</item>
+        <item>d10</item>
+        <item>d12</item>
+        <item>d20</item>
+        <item>d100</item>
+    </string-array>
+</resources>
